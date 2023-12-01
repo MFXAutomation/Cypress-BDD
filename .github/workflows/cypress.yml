@@ -17,7 +17,7 @@ jobs:
         run: npm install
 
       - name: Run Cypress tests
-        run: npx cypress test run --browser chrome --headed
+        run: npx cypress test run --headed
 
       - name: Upload Cypress test results to Cypress Dashboard
-        run: npx cypress test run --browser chrome --headed --record --key ${{ secrets.CYPRESS_RECORD_KEY }}
+        run: npx cypress test run --headed --record --key ${{ secrets.CYPRESS_RECORD_KEY }}
