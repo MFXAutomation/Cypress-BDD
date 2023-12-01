@@ -16,3 +16,10 @@ Given('enter the credentials', function() {
    login.setPassword("Testing.2");
    login.clickSubmit();
 });
+
+Then('enter required details and view Dashboard', function() {
+    //  cy.visit("https://fmsqa.goddardschool.com/login.aspx");
+    const fmsHome= new FMS_Home();
+    fmsHome.navigateDashboard("08/2023","11/2023");
+    cy.log("Navigated to dashboard");
+});
